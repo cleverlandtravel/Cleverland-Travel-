@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Your Dream | Cleveland Travel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="index.html" aria-label="Cleverland Travel home">
+<img src="assets/cleverland-logo-approved.png" alt="Cleverland Travel — Your Journey, My Passion">
+</a>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="main-nav" aria-label="Main navigation"><a  href="index.html">Home</a>
+<a href="cruises.html">Cruises</a>
+<a href="destinations.html">Destinations</a>
+<a href="disney.html">Disney</a>
+<a href="about.html">About Ashley</a>
+<a class="active" href="contact.html">Contact</a></nav>
+<a class="cta" href="contact.html">START DREAMING <span aria-hidden="true">›</span></a>
+</div>
+</header>
+
+<main class="dream-page">
+  <section class="dream-intro dream-intro-balanced dream-intro-v20">
+    <div class="dream-top-grid">
+      <div class="dream-intro-inner">
+        <p class="eyebrow">SHARE YOUR DREAM</p>
+        <h1>Where Would You<br>Love to Go?</h1>
+        <p class="dream-lead">You don’t need to have all the details figured out.</p>
+        <p>Tell me what you’re dreaming about, and we’ll begin there. Maybe you already know exactly where you want to go, or maybe you only know how you want the trip to feel. Either way, I’d love to hear about it.</p>
+      </div>
+
+      <aside class="dream-note dream-note-balanced">
+        <div class="ashley-contact-card">
+          <img src="assets/ashley-contact.jpg" alt="Ashley of Cleverland Travel">
+          <p><strong>Hi, I’m Ashley, and this is my husband and best friend, Daniel.</strong><br>I’d love to hear what you’re dreaming about.</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="dream-note-card dream-note-card-balanced dream-note-card-v20">
+      <h2>Not sure where to start?</h2>
+      <p>That’s perfectly fine. Tell me who is traveling, what sounds wonderful, and what matters most. I can help you sort through the possibilities.</p>
+    </div>
+  </section>
+
+  <section class="dream-form-section">
+    <div class="section-heading">
+      <span></span><h2>LET’S START DREAMING</h2><span></span>
+      <p>Share as much or as little as you know right now.</p>
+    </div>
+
+    <form class="dream-form" action="https://formspree.io/f/mvkovdek" method="post">
+      <input type="hidden" name="_subject" value="New Cleverland Travel — Share Your Dream Submission">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-grid">
+        <label>YOUR NAME
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>EMAIL ADDRESS
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>PHONE NUMBER <small>(optional)</small>
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label>WHO’S TRAVELING?
+          <input type="text" name="travelers" placeholder="Couple, family, friends, solo...">
+        </label>
+        <label>WHEN ARE YOU THINKING OF GOING?
+          <input type="text" name="dates" placeholder="Exact dates or just a season is fine">
+        </label>
+        <label>WHERE ARE YOU DREAMING OF GOING?
+          <input type="text" name="destination" placeholder="Or say “I’m not sure yet”">
+        </label>
+      </div>
+
+      <fieldset class="dream-options">
+        <legend>WHAT KIND OF TRIP ARE YOU DREAMING ABOUT?</legend>
+        <div class="option-grid">
+          <label><input type="checkbox" name="trip[]" value="Cruise"> Cruise</label>
+          <label><input type="checkbox" name="trip[]" value="Disney"> Disney</label>
+          <label><input type="checkbox" name="trip[]" value="Europe"> Europe</label>
+          <label><input type="checkbox" name="trip[]" value="Beach"> Beach escape</label>
+          <label><input type="checkbox" name="trip[]" value="Adventure"> Adventure</label>
+          <label><input type="checkbox" name="trip[]" value="Not sure"> I’m not sure yet</label>
+        </div>
+      </fieldset>
+
+      <label class="full-field">WHAT WOULD MAKE THIS TRIP SPECIAL FOR YOU?
+        <textarea name="dream" rows="6" placeholder="Tell me what you’re imagining, what matters most, what you want to celebrate, or anything else you’d like me to know."></textarea>
+      </label>
+
+      <label class="full-field">ANYTHING ELSE I SHOULD KNOW? <small>(optional)</small>
+        <textarea name="notes" rows="4"></textarea>
+      </label>
+
+      <div class="dream-submit">
+        <button type="submit">SHARE MY DREAM <span>›</span></button>
+        <p>I’ll personally review what you share and follow up so we can begin exploring the possibilities together.</p>
+      </div>
+    </form>
+  </section>
+</main>
+
+
+<script src="mobile.js"></script>
+</body>
+</html>

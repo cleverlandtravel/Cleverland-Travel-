@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alaska Cruises | Cleverland Travel</title><link rel="stylesheet" href="styles.css">
+<style>
+/* V30: Alaska hero readability + final subtitle line fit */
+.alaska-hero .hero-copy,
+.alaska-hero .destination-hero-copy,
+.destination-hero .hero-copy {
+  max-width: 860px !important;
+}
+.alaska-hero::before,
+.destination-hero.alaska-hero::before {
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:min(920px,68%);
+  background:linear-gradient(90deg,rgba(251,248,241,.94) 0%,rgba(251,248,241,.82) 58%,rgba(251,248,241,0) 100%);
+  pointer-events:none;
+  z-index:0;
+}
+.alaska-hero,
+.destination-hero.alaska-hero { position:relative; }
+.alaska-hero .hero-copy,
+.alaska-hero .destination-hero-copy,
+.destination-hero.alaska-hero > * { position:relative; z-index:1; }
+@media(max-width:800px){
+  .alaska-hero::before,
+  .destination-hero.alaska-hero::before{width:100%;background:rgba(251,248,241,.84)}
+}
+/* Keep the first Alaska hero sentence together on one line at desktop widths. */
+.alaska-overlay{max-width:790px !important;}
+.alaska-overlay p{white-space:nowrap;}
+@media(max-width:900px){.alaska-overlay p{white-space:normal;}}
+</style>
+
+</head>
+<body>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html"><img src="assets/cleverland-logo-approved.png" alt="Cleverland Travel"></a>
+<nav class="main-nav"><a href="index.html">Home</a><a class="active" href="cruises.html">Cruises</a><a href="destinations.html">Destinations</a><a href="disney.html">Disney</a><a href="about.html">About Ashley</a><a href="contact.html">Contact</a></nav>
+<a class="cta" href="contact.html">START DREAMING ›</a></div></header>
+<main class="alaska-page">
+<section class="alaska-hero"><img src="assets/alaska-hero-clean.jpg" alt="Cruise ship beside an Alaska glacier"><div class="alaska-overlay"><div class="eyebrow">ALASKA CRUISES</div><h1>A More Extraordinary<br>Kind of Beautiful.</h1><p>Towering mountains. Massive glaciers. Untouched wilderness.<br>An experience that stays with you long after you return.</p></div></section>
+<section class="ak-story">
+<div class="ak-img"><img src="assets/alaska-glacier.jpg" alt="Traveler viewing a massive Alaska glacier"></div>
+<div class="ak-copy"><span>01</span><h2>Witness Nature on<br>a Grand Scale.</h2><p>Stand on deck as a massive glacier fills your view. Hear the crack and rumble as ice calves into the sea. In Alaska, beauty isn’t just something you see. It is something you feel.</p></div>
+</section>
+<section class="ak-story blue reverse">
+<div class="ak-copy"><span>02</span><h2>Incredible Wildlife<br>at Every Turn.</h2><p>From whales surfacing in the distance to eagles soaring overhead, Alaska is alive with wonder. You might spot sea otters, puffins, bears, or even a pod of orcas. Every day brings another opportunity to see something extraordinary.</p></div>
+<div class="ak-img"><img src="assets/alaska-wildlife.jpg" alt="Whale breaching in Alaska"></div>
+</section>
+<section class="ak-story">
+<div class="ak-img"><img src="assets/alaska-ports.jpg" alt="Beautiful Alaska coastal landscape"></div>
+<div class="ak-copy"><span>03</span><h2>Breathtaking Ports<br>and Unique Experiences.</h2><p>Explore charming coastal towns, take a scenic rail journey, kayak in pristine waters, or simply breathe in the fresh mountain air. Alaska gives you a chance to slow down, reconnect with what matters, and experience a side of the world that feels untouched.</p></div>
+</section>
+<section class="ak-final"><div class="eyebrow">READY TO PLAN YOUR ALASKA ADVENTURE?</div><h2>Let’s Make This Dream Come True.</h2><a href="contact.html">I WANT TO MAKE THIS DREAM COME TRUE ›</a><p>Tell Ashley what you’re dreaming about, and she’ll help you begin.</p></section>
+</main></body></html>

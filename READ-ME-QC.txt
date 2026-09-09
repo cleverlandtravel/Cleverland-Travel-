@@ -1,0 +1,190 @@
+Cleverland Travel — Locked v10 QC
+
+LOCKED / APPROVED PAGES
+- Home
+- Cruises
+- Destinations
+- Disney
+- About Ashley
+- Contact / Share Your Dream
+
+QC CHANGES IN THIS VERSION
+- All six top navigation links now work.
+- All header "Start Dreaming" buttons point to Contact / Share Your Dream.
+- Text-based CTA buttons on Disney and About Ashley point to Contact.
+- Major CTA buttons and useful cards that are baked into image-based page artwork now have invisible clickable overlays.
+- No approved visual design, logo, header sizing, hero crop, page wording, or layout was changed.
+
+INTENTIONALLY NOT YET LIVE
+- The Share Your Dream form is connected to Formspree endpoint https://formspree.io/f/mvkovdek.
+- The Get Away Today "Learn More" button now opens https://www.getawaytoday.com in a new tab.
+- Social links inside any baked-in artwork are not wired yet.
+
+NEXT PHASE
+- Responsive/mobile and tablet testing.
+- Then connect the real form submission and external partner/social links.
+
+
+V13 MOBILE / TABLET PASS
+- Added a compact hamburger navigation below 900px.
+- Preserved the approved desktop header and page artwork above 900px.
+- Home, Cruises, and Destinations use mobile-specific crops of the approved artwork so text and cards remain readable on phones.
+- Disney, About Ashley, and Share Your Dream use their existing real-HTML responsive layouts with additional phone/tablet refinements.
+- Share Your Dream remains connected to Formspree.
+- Get Away Today remains linked to https://www.getawaytoday.com.
+
+
+V14 MOBILE HOMEPAGE CORRECTIONS
+- Restored the complete hero artwork on mobile so the right-side handwritten message is no longer clipped.
+- Rebuilt the Discover / Dream / Depart section so the shared heading appears once, fully visible, above the three steps.
+- Rebuilt the Get Away Today mobile block into complete stacked pieces so it no longer looks sliced across the phone width.
+- Desktop design remains unchanged.
+
+
+V15 MOBILE CARD CLEANUP
+- Removed the stray decorative divider lines from the edges of the six homepage service tiles on mobile.
+- This change uses mobile-only recrops and CSS; the approved desktop artwork/design is unchanged.
+
+
+V16 CONTACT PAGE — ASHLEY PHOTO
+- V15 remains the locked desktop/mobile baseline.
+- Added the supplied fountain photo of Ashley to the Share Your Dream introduction.
+- Added: “Hi, I’m Ashley. I’d love to hear what you’re dreaming about.”
+- The photo also appears cleanly on mobile.
+- No other approved page, form field, form submission connection, desktop layout, or mobile layout was changed.
+
+
+V17 CONTACT PAGE CORRECTION
+- Replaced the previous Ashley fountain photo with the newly supplied snowy travel photo.
+- Moved the “Share Your Dream / Where Would You Love to Go?” content upward by removing excess vertical hero spacing.
+- Balanced the headline and Ashley photo side-by-side at the top of the Contact page.
+- Mobile treatment remains responsive.
+- V15 desktop/mobile baseline and all other approved pages remain unchanged.
+- Existing Formspree submission connection remains unchanged.
+
+
+V18 CONTACT INTRO BALANCE
+- Moved the “Not sure where to start?” card beneath the introductory copy on the left.
+- Kept Ashley and her short greeting together on the right.
+- Aligned the top of the writing with the top of the photo.
+- Reduced excess vertical whitespace before the form.
+- No other page or form functionality was changed.
+
+
+V19 CONTACT FINAL SPACING
+- Centered the “Not sure where to start?” card within the left content area so it no longer feels left-heavy.
+- Reduced the vertical space before “Let’s Start Dreaming.”
+- No other page, layout, mobile behavior, or form functionality was changed.
+
+
+V20 CONTACT FIX
+- Corrected the v19 issue: the “Not sure where to start?” card is now centered across the entire intro section, not merely centered inside the left column.
+- Moved “Let’s Start Dreaming” up further by reducing the bottom of the intro and the top padding of the form section.
+- No other page or functionality was changed.
+
+V21 CARIBBEAN DESTINATION PAGE
+- V20 remains the locked approved baseline.
+- Added new caribbean.html as an immersive Caribbean cruise dream page.
+- Changed only the Caribbean tile links on Cruises (desktop and mobile) to caribbean.html.
+- No approved visual content on any existing page was altered.
+- Bottom Caribbean CTA points to the existing Share Your Dream form.
+
+V22 CARIBBEAN HERO FIX
+- Replaced the Caribbean hero background with a clean scenic cruise image that contains no baked-in text.
+- Kept the Caribbean headline, copy, layout, links, and all locked existing pages unchanged.
+
+V23 CARIBBEAN CLEANUP
+- Removed all baked-in-text artwork from the Caribbean page.
+- Rebuilt 01 and 02 with distinct, text-free images matching the copy: relaxation and snorkeling/adventure.
+- Rebuilt Immersive Travel Experiences as real HTML plus three contained photos, eliminating all overflow/off-page problems.
+- Replaced hero with a clean text-free Caribbean image.
+- Existing locked site pages remain unchanged.
+
+V24 CARIBBEAN FINISHING ADJUSTMENTS
+- Removed repeated imagery from the Immersive Travel Experiences strip.
+- Immersive strip now has three unique images: cruise arrival, sea turtle/reef, and sunset beach.
+- Reduced the vertical gap before “Imagine the Moment.”
+- No other locked pages were changed.
+
+V28 ALASKA HERO CLEANUP
+- Replaced only the Alaska hero background with a clean text-free glacier/cruise image.
+- Alaska headline/copy/layout and all other pages remain unchanged.
+
+V32 EUROPE FIX
+- Replaced the Europe hero with a clean text-free coastal image.
+- Hero now spans the full page width with centered cropping and no right-side overflow.
+- Kept live headline/copy over a subtle cream readability fade.
+- Preserved distinct images for history, coast, and culture sections.
+- Reduced the large gap before the final “Ready to Plan Your European Adventure?” CTA.
+- Existing locked pages remain unchanged.
+
+V34 HAWAII
+- Europe remains locked as approved.
+- Added Hawaii cruise destination page using only clean, text-free photo crops.
+- All Hawaii photos are distinct: hero, natural beauty, island/culture, sunset/renewal.
+- Hero is fully contained; no baked-in text or horizontal overflow.
+- Final spacing is intentionally compact before the CTA.
+- Wired Hawaii tile on Cruises page to hawaii.html on desktop and mobile.
+- All previously locked pages remain unchanged.
+
+V35 HAWAII FINAL FIXES
+- Strengthened the light hero overlay for better headline/body readability.
+- Replaced "Four islands" wording with "The Hawaiian Islands" so the page does not imply Hawaii has only four islands.
+- Everything else from approved v34 remains unchanged.
+
+V36 EXOTIC DESTINATIONS
+- Hawaii remains locked as approved.
+- Added Exotic Destinations cruise page with clean, text-free imagery only.
+- All images are unique: tropical longtail-boat hero, cultural architecture, South Pacific lagoon, and wildlife.
+- No baked-in text, no image overflow, no repeated images, and compact final CTA spacing.
+- Wired Exotic Destinations tile on Cruises page to exotic-destinations.html on desktop and mobile.
+- All previously locked pages remain unchanged.
+
+V38 DESTINATIONS ARROWS FIXED
+- Rebuilt from untouched locked v36 artwork.
+- Removed all eight chevron arrows from the Destinations tile grid.
+- No other page content or layout changed.
+
+V40 FINAL FOOTER AUDIT
+about.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+alaska.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+caribbean.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+contact.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+cruises.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+destinations.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+disney.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+europe.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+exotic-destinations.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+hawaii.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+index.html: Group Travel=clear
+  main nav: Home > Cruises > Destinations > Disney > About Ashley > Contact
+
+- Destinations was the only desktop artwork page containing the obsolete baked-in footer navigation.
+- Removed only that obsolete footer panel from the Destinations artwork.
+- Replaced it with a real clickable footer using the approved order:
+  Home, Cruises, Destinations, Disney, About Ashley, Contact.
+- Group Travel is absent.
+- Other locked pages were not visually changed.
+
+V41 FINAL MASTER
+- Removed the replacement footer from Destinations so the page ends cleanly and consistently with the rest of the site.
+- Kept the obsolete baked-in Destinations footer removed from the artwork.
+- No other approved page content, layout, links, wording, images, or form behavior changed.
+- This is the final master version.
+
+V42 FINAL MASTER
+- Destinations closing artwork corrected so the entire Start Your Journey button
+  and the intended space beneath it are visible.
+- Obsolete navy footer remains removed.
+- No replacement footer added.
+- No other approved site content changed.

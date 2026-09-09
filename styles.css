@@ -1,0 +1,1355 @@
+:root{
+  --cream:#fbf8f1;
+  --navy:#073f5b;
+  --gold:#b9852b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+
+/* LOCKED HEADER — do not alter */
+.site-header{
+  position:relative;
+  z-index:10;
+  height:132px;
+  background:var(--cream);
+}
+.header-inner{
+  max-width:1536px;
+  height:100%;
+  margin:0 auto;
+  padding:6px 22px;
+  display:grid;
+  grid-template-columns:390px minmax(0,1fr) 235px;
+  align-items:center;
+  gap:24px;
+}
+.brand{display:flex;align-items:center;min-width:0}
+.brand img{
+  display:block;
+  width:350px;
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.main-nav{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:28px;
+  min-width:0;
+  white-space:nowrap;
+}
+.main-nav a{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  min-height:54px;
+  padding:0 1px;
+  font-size:18px;
+  line-height:1;
+  font-weight:800;
+}
+.main-nav a.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:6px;
+  height:3px;
+  background:var(--gold);
+}
+.cta{
+  justify-self:end;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:226px;
+  min-height:64px;
+  padding:0 20px;
+  border-radius:999px;
+  background:var(--navy);
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.04em;
+  white-space:nowrap;
+}
+
+.hero img,.page-image img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.hero,.page-image{width:100%;overflow:hidden;background:#fff}
+
+@media (max-width:1320px){
+  .header-inner{grid-template-columns:335px minmax(0,1fr) 205px;gap:18px}
+  .brand img{width:320px}
+  .main-nav{gap:19px}
+  .main-nav a{font-size:16px}
+  .cta{width:200px;font-size:14px}
+}
+@media (max-width:1120px){
+  .site-header{height:126px}
+  .header-inner{
+    grid-template-columns:290px minmax(0,1fr) 182px;
+    gap:13px;padding-left:14px;padding-right:14px
+  }
+  .brand img{width:278px}
+  .main-nav{gap:13px}
+  .main-nav a{font-size:14px}
+  .cta{width:178px;min-height:56px;font-size:12px}
+}
+
+
+/* ===== DISNEY PAGE ONLY — locked site header above remains unchanged ===== */
+.disney-page{background:#fffaf2;color:#17364a;font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+.disney-page .container{width:min(1180px,92vw);margin:0 auto}
+.disney-page .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 26px;border:1px solid transparent;font:700 13px/1 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.disney-page .btn-gold{background:linear-gradient(180deg,#c99a45,#a77420);color:#fff}
+.disney-page .eyebrow{font:700 14px/1 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#073f5b;margin-bottom:8px}
+.disney-page h1,.disney-page h2,.disney-page h3{font-weight:400;color:#073f5b;margin:0}
+
+.disney-hero{background:linear-gradient(115deg,#fff9ef 0%,#f5ead3 48%,#dceef2 100%);padding:46px 0 44px;overflow:hidden;position:relative}
+.disney-hero:before{content:'✦';position:absolute;left:5%;top:18%;font-size:70px;color:rgba(184,134,46,.14)}
+.disney-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}
+.disney-kicker{font:700 14px/1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.18em;color:#a77420;margin-bottom:16px}
+.disney-hero h1{font-size:clamp(48px,6vw,82px);line-height:.95;margin:0 0 18px}
+.disney-hero .lead{font-size:22px;max-width:620px;margin:0 0 16px}
+.disney-hero .sublead{font-size:18px;max-width:650px;color:#425d6c;margin:0 0 28px}
+.disney-photo-frame{position:relative;background:#fff;padding:12px 12px 42px;box-shadow:0 18px 42px rgba(10,53,80,.18);transform:rotate(1.5deg);border:1px solid #eadbc2}
+.disney-photo-frame img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 35%}
+.disney-photo-caption{text-align:right;font-family:'Brush Script MT','Segoe Script',cursive;color:#073f5b;font-size:24px;padding:8px 8px 0}
+
+.disney-intro{padding:44px 0 24px;text-align:center;background:#fff}
+.disney-intro h2{font-size:clamp(34px,4vw,54px);margin-bottom:12px}
+.disney-intro p{font-size:19px;max-width:850px;margin:0 auto}
+
+.disney-options{padding:24px 0 54px;background:#fff}
+.disney-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.disney-card{min-height:270px;padding:28px 20px 22px;border-radius:16px;border:1px solid #eadfc9;background:linear-gradient(180deg,#fffdf8,#f5efe3);text-align:center;box-shadow:0 12px 28px rgba(10,53,80,.08)}
+.disney-icon{width:72px;height:72px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;background:linear-gradient(180deg,#e4c27b,#b9852c);color:#fff;font-size:32px}
+.disney-card h3{font-size:24px;line-height:1.05;margin-bottom:10px}
+.disney-card p{font-size:15.5px;margin:0;color:#4f6572}
+
+.disney-planning{padding:52px 0;background:linear-gradient(180deg,#eef8f7,#e5f3f4)}
+.disney-planning h2{text-align:center;font-size:clamp(34px,4vw,52px);margin-bottom:32px}
+.disney-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.disney-benefit{text-align:center;padding:0 16px}
+.disney-benefit .mini{font-size:36px;color:#a77420;margin-bottom:8px}
+.disney-benefit h3{font-size:22px;margin-bottom:8px}
+.disney-benefit p{font-size:16px;margin:0}
+
+.disney-story{padding:56px 0;background:#fffaf2}
+.disney-story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.disney-story-photo{background:#fff;padding:12px 12px 36px;box-shadow:0 16px 35px rgba(10,53,80,.14);transform:rotate(-1.5deg)}
+.disney-story-photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.disney-story-photo .cap{font-family:'Brush Script MT','Segoe Script',cursive;text-align:right;font-size:23px;color:#073f5b;padding-top:7px}
+.disney-story h2{font-size:clamp(36px,4vw,58px);line-height:1;margin-bottom:16px}
+.disney-story p{font-size:18px;margin:0 0 16px}
+.disney-quote{font-family:'Brush Script MT','Segoe Script',cursive;font-size:34px;line-height:1.05;color:#073f5b;margin:20px 0 26px}
+
+.disney-steps{padding:48px 0;background:#fff}
+.disney-steps h2{text-align:center;font-size:32px;letter-spacing:.03em;margin-bottom:24px}
+.disney-page .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.disney-page .step{text-align:center;padding:0 36px;min-height:170px}
+.disney-page .step+.step{border-left:1px solid rgba(184,134,46,.45)}
+.disney-page .step-icon{width:58px;height:58px;border-radius:50%;margin:0 auto 8px;background:linear-gradient(180deg,#e5c485,#c69a48);display:grid;place-items:center;font-size:28px;color:#073f5b}
+.disney-page .step h3{font-size:27px;letter-spacing:.05em}
+.disney-page .step p{font-size:17px;margin:6px auto 0;max-width:330px}
+
+.disney-close{padding:60px 20px;text-align:center;background:linear-gradient(180deg,#f7e9c8,#f2d7a8)}
+.disney-close h2{font-family:'Brush Script MT','Segoe Script',cursive;font-size:clamp(46px,6vw,78px);color:#96691e;margin-bottom:6px}
+.disney-close .ddd{font:700 15px/1 Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#073f5b;margin:10px 0 24px}
+.disney-disclaimer{font:12px/1.5 Arial,sans-serif;color:#637782;max-width:920px;margin:18px auto 0}
+
+@media(max-width:1050px){
+  .disney-cards{grid-template-columns:repeat(3,1fr)}
+  .disney-benefits{grid-template-columns:repeat(2,1fr);row-gap:28px}
+}
+@media(max-width:760px){
+  .disney-hero-grid,.disney-story-grid{grid-template-columns:1fr}
+  .disney-cards{grid-template-columns:1fr 1fr}
+  .disney-benefits{grid-template-columns:1fr}
+  .disney-photo-frame,.disney-story-photo{transform:none}
+  .disney-page .steps{grid-template-columns:1fr}
+  .disney-page .step{padding:20px 24px}
+  .disney-page .step+.step{border-left:0;border-top:1px solid rgba(184,134,46,.35)}
+}
+@media(max-width:500px){.disney-cards{grid-template-columns:1fr}.disney-hero h1{font-size:48px}}
+
+
+/* ===== ABOUT ASHLEY PAGE ONLY — locked site header above remains unchanged ===== */
+.about-page{
+  background:#fffaf2;
+  color:#17364a;
+  font-family:Georgia,'Times New Roman',serif;
+  line-height:1.5;
+}
+.about-page .container{width:min(1180px,92vw);margin:0 auto}
+.about-page h1,.about-page h2,.about-page h3{font-weight:400;color:#073f5b;margin:0}
+.about-page .eyebrow{
+  font:700 14px/1 Arial,sans-serif;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  color:#a77420;
+  margin-bottom:14px;
+}
+.about-page .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  padding:15px 28px;
+  background:linear-gradient(180deg,#c99a45,#a77420);
+  color:#fff;
+  font:700 13px/1 Arial,sans-serif;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+/* Hero */
+.about-hero{
+  background:linear-gradient(115deg,#fffaf2 0%,#f7ecd8 52%,#e8f2f1 100%);
+  padding:50px 0 54px;
+}
+.about-hero-grid{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:54px;
+  align-items:center;
+}
+.about-hero h1{
+  font-size:clamp(44px,4.8vw,66px);
+  line-height:.96;
+  margin-bottom:22px;
+}
+.about-hero .lead{
+  font-size:22px;
+  max-width:610px;
+  margin:0 0 18px;
+}
+.about-hero .copy{
+  font-size:18px;
+  color:#455f6c;
+  margin:0 0 28px;
+}
+.about-hero-photo{
+  background:#fff;
+  padding:12px 12px 40px;
+  box-shadow:0 18px 40px rgba(10,53,80,.16);
+  transform:rotate(1.5deg);
+}
+.about-hero-photo img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center 32%;
+}
+.about-photo-note{
+  text-align:right;
+  font-family:'Brush Script MT','Segoe Script',cursive;
+  color:#073f5b;
+  font-size:25px;
+  padding:8px 8px 0;
+}
+
+/* Story */
+.about-story{
+  padding:60px 0;
+  background:#fff;
+}
+.about-story-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:54px;
+  align-items:center;
+}
+.about-story h2{
+  font-size:clamp(38px,4.5vw,58px);
+  line-height:1.02;
+  margin-bottom:18px;
+}
+.about-story p{
+  font-size:18px;
+  margin:0 0 16px;
+}
+.about-ireland{
+  background:#fff;
+  padding:10px 10px 34px;
+  box-shadow:0 14px 34px rgba(10,53,80,.13);
+  transform:rotate(-1.2deg);
+}
+.about-ireland img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+.about-ireland .cap{
+  font-family:'Brush Script MT','Segoe Script',cursive;
+  font-size:24px;
+  color:#073f5b;
+  text-align:right;
+  padding:7px 7px 0;
+}
+
+/* Why work with Ashley */
+.about-values{
+  padding:58px 0;
+  background:linear-gradient(180deg,#eef7f6,#e7f1f1);
+}
+.about-values h2{
+  text-align:center;
+  font-size:clamp(38px,4.5vw,56px);
+  margin-bottom:34px;
+}
+.about-values-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.about-value{
+  text-align:center;
+  background:rgba(255,255,255,.66);
+  border:1px solid rgba(184,134,46,.25);
+  border-radius:16px;
+  padding:28px 18px;
+}
+.about-value .icon{
+  width:64px;height:64px;border-radius:50%;
+  margin:0 auto 14px;
+  display:grid;place-items:center;
+  background:linear-gradient(180deg,#e5c485,#c79a45);
+  color:#073f5b;
+  font-size:28px;
+}
+.about-value h3{font-size:24px;margin-bottom:8px}
+.about-value p{font-size:15.5px;margin:0;color:#4a6370}
+
+/* Personal montage */
+.about-personal{
+  padding:62px 0;
+  background:#fffaf2;
+}
+.about-personal-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:54px;
+  align-items:center;
+}
+.about-collage{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.about-collage figure{
+  margin:0;
+  background:#fff;
+  padding:9px 9px 28px;
+  box-shadow:0 12px 28px rgba(10,53,80,.12);
+}
+.about-collage figure:nth-child(1){transform:rotate(-2deg)}
+.about-collage figure:nth-child(2){transform:rotate(2deg)}
+.about-collage img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+}
+.about-collage figcaption{
+  font-family:'Brush Script MT','Segoe Script',cursive;
+  color:#073f5b;
+  font-size:21px;
+  text-align:center;
+  padding-top:5px;
+}
+.about-personal h2{
+  font-size:clamp(38px,4.5vw,58px);
+  line-height:1.03;
+  margin-bottom:16px;
+}
+.about-personal p{font-size:18px;margin:0 0 16px}
+.about-quote{
+  font-family:'Brush Script MT','Segoe Script',cursive;
+  font-size:36px;
+  color:#073f5b;
+  line-height:1.08;
+  margin:22px 0 28px;
+}
+
+/* Process */
+.about-process{
+  padding:50px 0 56px;
+  background:#fff;
+}
+.about-process h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:28px;
+  letter-spacing:.02em;
+}
+.about-process-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+}
+.about-process .step{
+  text-align:center;
+  padding:0 34px;
+}
+.about-process .step+.step{
+  border-left:1px solid rgba(184,134,46,.42);
+}
+.about-process .num{
+  width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(180deg,#e4c47f,#c69742);
+  display:grid;place-items:center;
+  margin:0 auto 10px;
+  color:#073f5b;
+  font:700 21px/1 Arial,sans-serif;
+}
+.about-process h3{
+  font-size:28px;
+  letter-spacing:.04em;
+}
+.about-process p{
+  font-size:17px;
+  max-width:330px;
+  margin:6px auto 0;
+}
+
+/* Closing */
+.about-close{
+  text-align:center;
+  padding:62px 20px 68px;
+  background:linear-gradient(180deg,#f6e6c5,#f1d3a0);
+}
+.about-close h2{
+  font-family:'Brush Script MT','Segoe Script',cursive;
+  font-size:clamp(48px,6vw,78px);
+  color:#95691e;
+  margin-bottom:6px;
+}
+.about-close .sub{
+  font:700 15px/1 Arial,sans-serif;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#073f5b;
+  margin:12px 0 26px;
+}
+
+@media(max-width:950px){
+  .about-hero-grid,.about-story-grid,.about-personal-grid{grid-template-columns:1fr}
+  .about-values-grid{grid-template-columns:1fr 1fr}
+  .about-hero-photo,.about-ireland{transform:none}
+}
+@media(max-width:700px){
+  .about-values-grid{grid-template-columns:1fr}
+  .about-process-grid{grid-template-columns:1fr}
+  .about-process .step{padding:20px 24px}
+  .about-process .step+.step{border-left:0;border-top:1px solid rgba(184,134,46,.35)}
+}
+
+
+/* ===== Share Your Dream / Contact page ===== */
+.dream-page{background:#fbf7ef;color:#123f59;}
+.dream-intro{
+  max-width:1480px;margin:0 auto;padding:72px 62px 64px;
+  display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);
+  gap:80px;align-items:center;
+  background:linear-gradient(105deg,#fff9ed 0%,#fff9ed 58%,#eef7f5 100%);
+}
+.dream-intro-inner{max-width:760px;}
+.dream-intro .eyebrow{font-family:Arial,sans-serif;font-size:18px;font-weight:800;letter-spacing:.2em;color:#ae771d;margin:0 0 20px;}
+.dream-intro h1{font-family:Georgia,serif;font-size:clamp(56px,5.4vw,82px);line-height:.98;font-weight:400;margin:0 0 28px;color:#064865;}
+.dream-intro .dream-lead{font-family:Georgia,serif;font-size:28px;line-height:1.35;font-weight:700;margin:0 0 16px;}
+.dream-intro p{font-family:Georgia,serif;font-size:21px;line-height:1.55;margin:0;}
+.dream-note{padding:10px 10px 0;}
+.script-note{font-family:"Brush Script MT","Segoe Script",cursive!important;font-size:37px!important;line-height:1.22!important;transform:rotate(-5deg);color:#8a632d!important;margin:0 0 42px!important;text-align:center;}
+.dream-note-card{background:#fff;border:1px solid #e8d9bf;padding:30px 34px;box-shadow:0 12px 30px rgba(39,55,61,.08);transform:rotate(1deg);}
+.dream-note-card h2{font-family:Georgia,serif;font-weight:400;font-size:29px;margin:0 0 12px;color:#064865;}
+.dream-note-card p{font-size:18px;line-height:1.5;}
+.dream-form-section{max-width:1320px;margin:0 auto;padding:58px 62px 86px;}
+.section-heading{text-align:center;margin-bottom:40px;}
+.section-heading h2{font-family:Georgia,serif;font-weight:400;letter-spacing:.12em;font-size:31px;margin:0;display:inline-block;padding:0 24px;}
+.section-heading span{display:inline-block;width:160px;height:1px;background:#b88936;vertical-align:middle;}
+.section-heading p{font-family:Georgia,serif;font-size:19px;margin:12px 0 0;color:#45677a;}
+.dream-form{background:#fff;padding:44px 48px 48px;border:1px solid #eadfcb;box-shadow:0 10px 30px rgba(38,53,61,.06);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:27px 32px;}
+.dream-form label,.dream-options legend{font-family:Arial,sans-serif;font-size:13px;font-weight:800;letter-spacing:.11em;color:#73551e;}
+.dream-form small{font-weight:500;letter-spacing:0;text-transform:none;color:#71808a;}
+.dream-form input[type=text],.dream-form input[type=email],.dream-form input[type=tel],.dream-form textarea{
+  width:100%;box-sizing:border-box;margin-top:9px;border:1px solid #cfc6b7;background:#fffdf9;
+  padding:15px 16px;font-family:Georgia,serif;font-size:17px;color:#173f55;border-radius:2px;
+}
+.dream-form input:focus,.dream-form textarea:focus{outline:2px solid rgba(180,132,43,.28);border-color:#b4842b;}
+.dream-options{border:0;padding:0;margin:34px 0 32px;}
+.dream-options legend{margin-bottom:15px;}
+.option-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 16px;}
+.option-grid label{background:#faf5eb;border:1px solid #e4d8c3;padding:14px 16px;font-family:Georgia,serif;font-size:17px;font-weight:400;letter-spacing:0;color:#173f55;}
+.option-grid input{margin-right:8px;}
+.full-field{display:block;margin-top:26px;}
+.dream-submit{text-align:center;margin-top:34px;}
+.dream-submit button{border:0;border-radius:999px;background:#a9751e;color:white;font-family:Arial,sans-serif;font-weight:800;letter-spacing:.08em;font-size:16px;padding:20px 34px;cursor:pointer;}
+.dream-submit button span{font-size:25px;line-height:0;margin-left:9px;vertical-align:-2px;}
+.dream-submit p{font-family:Georgia,serif;font-size:16px;line-height:1.45;max-width:620px;margin:16px auto 0;color:#5c7180;}
+
+@media(max-width:900px){
+  .dream-intro{grid-template-columns:1fr;padding:48px 28px;gap:36px;}
+  .dream-intro h1{font-size:54px;}
+  .dream-note{display:none;}
+  .dream-form-section{padding:42px 24px 65px;}
+  .dream-form{padding:30px 24px;}
+  .form-grid{grid-template-columns:1fr;}
+  .option-grid{grid-template-columns:1fr 1fr;}
+  .section-heading span{width:55px;}
+}
+@media(max-width:560px){
+  .dream-intro h1{font-size:44px;}
+  .option-grid{grid-template-columns:1fr;}
+  .section-heading span{display:none;}
+}
+
+
+/* ===== QC-only click targets for approved image-based page artwork =====
+   These anchors add functionality without changing any locked visual design. */
+.image-link-wrap{position:relative;width:100%}
+.image-link-wrap>img{display:block;width:100%;height:auto}
+.image-hotspot{
+  position:absolute;
+  display:block;
+  z-index:3;
+  background:transparent;
+  border:0;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+
+
+/* ===== v13 RESPONSIVE PASS =====
+   Desktop artwork/design remains unchanged above 900px. */
+.menu-toggle{display:none}
+.mobile-artwork{display:none}
+
+@media(max-width:900px){
+  body{overflow-x:hidden}
+
+  .site-header{height:94px}
+  .header-inner{
+    height:94px;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 48px;
+    gap:12px;
+    padding:8px 16px;
+  }
+  .brand img{width:250px;max-height:78px}
+  .cta{display:none}
+
+  .menu-toggle{
+    display:flex;
+    width:46px;height:46px;
+    justify-self:end;
+    align-items:center;justify-content:center;
+    flex-direction:column;gap:5px;
+    background:transparent;border:0;border-radius:8px;
+    cursor:pointer;padding:8px;
+  }
+  .menu-toggle span{display:block;width:26px;height:3px;background:var(--navy);border-radius:3px}
+
+  .main-nav{
+    display:none;
+    position:absolute;
+    left:0;right:0;top:94px;
+    padding:12px 18px 20px;
+    background:var(--cream);
+    border-top:1px solid rgba(7,63,91,.12);
+    box-shadow:0 12px 24px rgba(20,45,58,.14);
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    white-space:normal;
+  }
+  body.nav-open .main-nav{display:flex}
+  .main-nav a{
+    min-height:48px;
+    padding:0 8px;
+    font-size:16px;
+    border-bottom:1px solid rgba(7,63,91,.1);
+  }
+  .main-nav a.active::after{left:8px;right:auto;width:42px;bottom:4px}
+
+  .desktop-artwork{display:none!important}
+  .mobile-artwork{display:block}
+  .mobile-artwork img{display:block;max-width:100%;height:auto}
+  .mobile-wide{width:100%}
+  .mobile-page,.mobile-home-body,.home-mobile{background:#fffaf2}
+
+  .mobile-card-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    padding:10px;
+  }
+  .mobile-card-grid a,.mobile-card-grid img{width:100%}
+  .mobile-split{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:8px;
+    padding:10px;
+    background:#fffaf2;
+    align-items:stretch;
+  }
+  .mobile-split img{width:100%;height:100%;object-fit:cover}
+  .mobile-stack{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+    padding:10px;
+    background:#edf8f6;
+  }
+  .mobile-stack img{width:100%}
+  .getaway-mobile{grid-template-columns:1.1fr .9fr;background:#fff}
+  .mobile-benefit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    padding:10px;
+    background:#fffaf2;
+  }
+  .mobile-benefit-grid img{width:100%}
+
+  /* Real HTML pages */
+  .disney-page .container,.about-page .container{width:min(92vw,680px)}
+  .disney-hero,.about-hero{padding-top:34px;padding-bottom:36px}
+  .disney-hero h1{font-size:clamp(44px,10vw,60px)}
+  .about-hero h1{font-size:clamp(40px,9vw,58px)}
+  .disney-hero .lead,.about-hero .lead{font-size:20px}
+  .dream-intro{padding:42px 24px 40px}
+  .dream-intro h1{font-size:clamp(44px,10vw,58px)}
+  .dream-form-section{padding-left:18px;padding-right:18px}
+}
+
+@media(max-width:620px){
+  .site-header,.header-inner{height:82px}
+  .header-inner{grid-template-columns:minmax(0,1fr) 44px;padding:7px 12px}
+  .brand img{width:218px;max-height:68px}
+  .main-nav{top:82px}
+  .mobile-card-grid{grid-template-columns:1fr 1fr;gap:6px;padding:8px}
+  .mobile-split{grid-template-columns:1fr;padding:8px}
+  .getaway-mobile{grid-template-columns:1fr}
+  .mobile-benefit-grid{grid-template-columns:1fr 1fr;gap:6px;padding:8px}
+
+  .disney-hero-grid,.disney-story-grid,
+  .about-hero-grid,.about-story-grid,.about-personal-grid{gap:30px}
+  .disney-cards{grid-template-columns:1fr}
+  .disney-card{min-height:0}
+  .about-collage{gap:8px}
+  .about-process h2,.disney-steps h2{font-size:27px;line-height:1.15}
+
+  .dream-intro{padding:34px 18px}
+  .dream-intro h1{font-size:42px}
+  .dream-intro .dream-lead{font-size:23px}
+  .dream-intro p{font-size:18px}
+  .dream-form-section{padding:34px 12px 55px}
+  .dream-form{padding:24px 16px}
+  .section-heading h2{font-size:26px;padding:0}
+  .option-grid{grid-template-columns:1fr}
+  .dream-submit button{width:100%}
+}
+
+@media(max-width:430px){
+  .mobile-card-grid{grid-template-columns:1fr}
+  .mobile-benefit-grid{grid-template-columns:1fr}
+  .brand img{width:205px}
+}
+
+
+/* ===== v14 homepage mobile corrections ===== */
+@media(max-width:900px){
+  .home-mobile img{width:100%;height:auto}
+  .mobile-process{
+    background:#edf8f6;
+    padding:22px 10px 10px;
+    text-align:center;
+  }
+  .mobile-process h2{
+    margin:0 0 14px;
+    font-family:Georgia,serif;
+    font-size:clamp(20px,5.8vw,27px);
+    line-height:1.18;
+    font-weight:400;
+    color:var(--navy);
+    letter-spacing:.01em;
+  }
+  .mobile-process .mobile-stack{
+    padding:0;
+    background:transparent;
+  }
+  .mobile-getaway{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+    background:#fff;
+    padding:10px 8px;
+  }
+  .mobile-getaway img{
+    width:100%;
+    height:auto;
+  }
+}
+
+
+/* ===== v15 mobile service-card edge cleanup ===== */
+@media(max-width:900px){
+  .mobile-card-grid a{
+    display:block;
+    overflow:hidden;
+    line-height:0;
+    background:#fffaf2;
+  }
+  .mobile-card-grid img{
+    display:block;
+    width:100%;
+    height:auto;
+    border:0;
+    outline:0;
+  }
+}
+
+
+/* ===== v16 Ashley introduction on Share Your Dream page ===== */
+.ashley-contact-card{
+  max-width:360px;
+  margin:0 auto 28px;
+  text-align:center;
+}
+.ashley-contact-card img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center 30%;
+  border:8px solid #fff;
+  box-shadow:0 12px 30px rgba(39,55,61,.12);
+}
+.ashley-contact-card p{
+  margin:15px 0 0!important;
+  font-family:Georgia,serif!important;
+  font-size:20px!important;
+  line-height:1.42!important;
+  color:#173f55!important;
+}
+.ashley-contact-card strong{
+  font-size:24px;
+  font-weight:400;
+  color:#064865;
+}
+
+@media(max-width:900px){
+  /* The previous mobile rule hid the whole right column.
+     Show Ashley on mobile, while keeping the secondary note compact. */
+  .dream-note{
+    display:block;
+    padding:0;
+  }
+  .ashley-contact-card{
+    max-width:330px;
+    margin:0 auto 24px;
+  }
+  .dream-note-card{
+    max-width:520px;
+    margin:0 auto;
+    transform:none;
+  }
+}
+
+
+/* ===== v17 Contact hero balance + new Ashley photo ===== */
+/* Contact-page-only correction. All other locked pages remain unchanged. */
+.dream-hero-balanced{
+  min-height:0!important;
+  padding-top:72px!important;
+  padding-bottom:72px!important;
+  align-items:center!important;
+}
+.dream-hero-balanced .dream-copy{
+  align-self:center!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+}
+.dream-hero-balanced .dream-note{
+  align-self:center!important;
+  padding-top:0!important;
+  padding-bottom:0!important;
+}
+.dream-hero-balanced .ashley-contact-card{
+  margin-top:0!important;
+  margin-bottom:22px!important;
+}
+.dream-hero-balanced .ashley-contact-card img{
+  aspect-ratio:1/1!important;
+  object-fit:cover!important;
+  object-position:center 38%!important;
+}
+
+@media(max-width:900px){
+  .dream-hero-balanced{
+    padding-top:36px!important;
+    padding-bottom:42px!important;
+  }
+  .dream-hero-balanced .ashley-contact-card img{
+    aspect-ratio:4/5!important;
+    object-position:center 38%!important;
+  }
+}
+
+
+/* ===== v18 Contact intro balance correction ===== */
+/* This targets only the Share Your Dream opening section. */
+.dream-intro-balanced{
+  padding-top:54px!important;
+  padding-bottom:54px!important;
+  grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr)!important;
+  gap:64px!important;
+  align-items:start!important;
+}
+.dream-intro-balanced .dream-intro-inner{
+  max-width:760px;
+  padding-top:4px;
+}
+.dream-intro-balanced .eyebrow{
+  margin-top:0!important;
+}
+.dream-intro-balanced h1{
+  margin-bottom:24px!important;
+}
+.dream-note-balanced{
+  padding:0!important;
+  align-self:start!important;
+}
+.dream-note-balanced .ashley-contact-card{
+  max-width:440px!important;
+  margin:0 auto!important;
+}
+.dream-note-balanced .ashley-contact-card img{
+  width:100%!important;
+  aspect-ratio:1.2/1!important;
+  object-fit:cover!important;
+  object-position:center 40%!important;
+}
+.dream-note-balanced .ashley-contact-card p{
+  margin-top:16px!important;
+}
+.dream-note-card-balanced{
+  margin-top:30px!important;
+  max-width:680px;
+  transform:none!important;
+  box-shadow:0 8px 22px rgba(39,55,61,.07)!important;
+  padding:24px 28px!important;
+}
+.dream-note-card-balanced h2{
+  font-size:27px!important;
+  margin-bottom:8px!important;
+}
+.dream-note-card-balanced p{
+  font-size:17px!important;
+  line-height:1.48!important;
+}
+
+/* Remove the unused v17 selectors' effect by overriding the real section cleanly. */
+@media(max-width:900px){
+  .dream-intro-balanced{
+    grid-template-columns:1fr!important;
+    gap:30px!important;
+    padding:34px 22px 40px!important;
+  }
+  .dream-note-balanced{
+    display:block!important;
+    order:2;
+  }
+  .dream-note-balanced .ashley-contact-card{
+    max-width:420px!important;
+  }
+  .dream-note-balanced .ashley-contact-card img{
+    aspect-ratio:4/5!important;
+    object-position:center 38%!important;
+  }
+  .dream-note-card-balanced{
+    margin-top:24px!important;
+  }
+}
+
+@media(max-width:560px){
+  .dream-intro-balanced{
+    padding:28px 16px 34px!important;
+  }
+  .dream-note-card-balanced{
+    padding:21px 20px!important;
+  }
+}
+
+
+/* ===== v19 final Contact spacing adjustment ===== */
+/* Move the “Not sure where to start?” card toward center and tighten the gap before the form. */
+.dream-note-card-balanced{
+  margin-left:auto!important;
+  margin-right:auto!important;
+  max-width:620px!important;
+}
+
+/* Pull the next section upward slightly to remove excess open space. */
+.dream-form-section{
+  padding-top:34px!important;
+}
+
+@media(min-width:901px){
+  .dream-intro-balanced{
+    padding-bottom:34px!important;
+  }
+}
+
+@media(max-width:900px){
+  .dream-form-section{
+    padding-top:28px!important;
+  }
+}
+
+
+/* ===== v20 actual Contact centering + spacing fix ===== */
+/* The previous v19 centered the card only inside the LEFT column.
+   V20 moves it below both columns and centers it across the whole intro section. */
+.dream-intro-v20{
+  display:block!important;
+  padding:46px 62px 22px!important;
+}
+.dream-top-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);
+  gap:64px;
+  align-items:start;
+}
+.dream-note-card-v20{
+  width:min(620px,86%);
+  max-width:620px!important;
+  margin:24px auto 0!important;
+  padding:22px 28px!important;
+}
+.dream-form-section{
+  padding-top:20px!important;
+}
+.section-heading{
+  margin-bottom:32px!important;
+}
+
+@media(max-width:900px){
+  .dream-intro-v20{
+    padding:34px 22px 20px!important;
+  }
+  .dream-top-grid{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .dream-note-card-v20{
+    width:100%;
+    margin-top:22px!important;
+  }
+  .dream-form-section{
+    padding-top:18px!important;
+  }
+}
+
+@media(max-width:560px){
+  .dream-intro-v20{
+    padding:28px 16px 18px!important;
+  }
+}
+
+
+/* ===== Caribbean destination page — additive only; locked site remains unchanged ===== */
+.caribbean-page{background:#fbf8f1;color:#073f5b}
+.caribbean-hero{position:relative;overflow:hidden;min-height:520px;background:#073f5b}
+.caribbean-hero>img{width:100%;height:520px;object-fit:cover;display:block;filter:brightness(.78)}
+.caribbean-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,43,63,.66),rgba(3,43,63,.08) 68%)}
+.caribbean-hero-copy{position:absolute;z-index:2;left:max(6vw,60px);top:50%;transform:translateY(-50%);max-width:690px;color:#fff}
+.caribbean-kicker,.caribbean-eyebrow{font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:800;letter-spacing:.22em;color:#c89b47}
+.caribbean-hero h1{font-family:Georgia,serif;font-size:clamp(54px,6vw,88px);line-height:.98;font-weight:400;margin:16px 0 22px}
+.caribbean-hero-copy>p:last-child{font-family:Georgia,serif;font-size:22px;line-height:1.5;max-width:620px}
+.caribbean-intro{max-width:980px;margin:0 auto;text-align:center;padding:78px 40px 70px}
+.caribbean-intro h2,.caribbean-copy h2,.caribbean-wide-copy h2,.caribbean-imagine h2,.caribbean-cta h2{font-family:Georgia,serif;font-weight:400}
+.caribbean-intro h2{font-size:48px;margin:12px 0 22px}
+.caribbean-lead{font-family:Georgia,serif;font-size:22px;line-height:1.7;color:#31596e}
+.caribbean-story{max-width:1280px;margin:0 auto 42px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:64px;padding:0 48px}
+.caribbean-story-reverse .caribbean-photo{order:2}
+.caribbean-story-reverse .caribbean-copy{order:1}
+.caribbean-photo{overflow:hidden;box-shadow:0 18px 44px rgba(23,64,82,.13)}
+.caribbean-photo img{display:block;width:100%;aspect-ratio:1.38/1;object-fit:cover}
+.caribbean-copy{padding:26px 8px}
+.caribbean-number{font-family:Georgia,serif;font-size:58px;line-height:1;color:#d6b06a;margin:0 0 14px}
+.caribbean-copy h2{font-size:40px;line-height:1.1;margin:0 0 20px}
+.caribbean-copy p:not(.caribbean-number){font-family:Georgia,serif;font-size:19px;line-height:1.65;color:#385e70}
+.caribbean-wide{max-width:1320px;margin:82px auto 0;background:#e9f5f3}
+.caribbean-wide>img{width:100%;height:320px;object-fit:cover;display:block}
+.caribbean-wide-copy{max-width:920px;margin:0 auto;text-align:center;padding:54px 48px 62px}
+.caribbean-wide-copy h2{font-size:44px;line-height:1.12;margin:12px 0 20px}
+.caribbean-wide-copy p:last-child{font-family:Georgia,serif;font-size:20px;line-height:1.65;color:#385e70}
+.caribbean-imagine{max-width:880px;margin:0 auto;text-align:center;padding:86px 38px 74px}
+.caribbean-imagine h2{font-size:46px;line-height:1.14;margin:14px 0 24px}
+.caribbean-imagine p{font-family:Georgia,serif;font-size:20px;line-height:1.7;color:#385e70}
+.caribbean-closing-line{font-style:italic;color:#9b6e25!important;font-size:22px!important;margin-top:26px}
+.caribbean-cta{background:#073f5b;color:#fff;text-align:center;padding:70px 30px 78px}
+.caribbean-cta h2{font-size:38px;line-height:1.2;max-width:800px;margin:0 auto 30px}
+.caribbean-cta a{display:inline-flex;align-items:center;gap:10px;background:#b9852b;color:#fff;border-radius:999px;padding:20px 32px;font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:.07em;font-size:15px}
+.caribbean-cta a span{font-size:25px;line-height:0}
+
+@media(max-width:900px){
+  .caribbean-hero,.caribbean-hero>img{min-height:460px;height:460px}
+  .caribbean-hero-copy{left:28px;right:28px}
+  .caribbean-hero h1{font-size:54px}
+  .caribbean-story{grid-template-columns:1fr;gap:24px;padding:0 22px;margin-bottom:56px}
+  .caribbean-story-reverse .caribbean-photo,.caribbean-story-reverse .caribbean-copy{order:initial}
+  .caribbean-intro{padding:58px 24px 50px}
+  .caribbean-intro h2{font-size:40px}
+  .caribbean-copy h2{font-size:34px}
+  .caribbean-wide{margin-top:46px}
+  .caribbean-wide-copy{padding:42px 24px 48px}
+  .caribbean-wide-copy h2{font-size:36px}
+  .caribbean-imagine{padding:62px 24px}
+  .caribbean-imagine h2{font-size:38px}
+}
+@media(max-width:560px){
+  .caribbean-hero,.caribbean-hero>img{height:410px;min-height:410px}
+  .caribbean-hero-copy{left:20px;right:20px}
+  .caribbean-hero h1{font-size:43px}
+  .caribbean-hero-copy>p:last-child{font-size:18px}
+  .caribbean-story{padding:0 16px}
+  .caribbean-photo img{aspect-ratio:1.1/1}
+  .caribbean-copy{padding:14px 4px}
+  .caribbean-copy h2{font-size:31px}
+  .caribbean-wide>img{height:220px}
+  .caribbean-cta h2{font-size:31px}
+  .caribbean-cta a{width:min(100%,360px);justify-content:center;padding:18px 20px;font-size:13px}
+}
+
+
+/* ===== v23 Caribbean page cleanup =====
+   New page-only styles. Existing locked site remains unchanged. */
+.caribbean-v23{overflow-x:hidden}
+.caribbean-hero-v23{position:relative;min-height:520px;overflow:hidden;background:#073f5b}
+.caribbean-hero-v23>img{display:block;width:100%;height:520px;object-fit:cover}
+.caribbean-hero-v23:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,43,63,.72),rgba(3,43,63,.20) 68%,rgba(3,43,63,.08))}
+.caribbean-hero-v23-copy{position:absolute;z-index:2;left:max(6vw,60px);top:50%;transform:translateY(-50%);max-width:700px;color:#fff}
+.caribbean-hero-v23-copy h1{font-family:Georgia,serif;font-size:clamp(54px,6vw,88px);line-height:.98;font-weight:400;margin:16px 0 22px}
+.caribbean-hero-v23-copy>p:last-child{font-family:Georgia,serif;font-size:22px;line-height:1.5;max-width:620px}
+
+.caribbean-story-v23{
+  max-width:1240px;
+  margin:0 auto 72px;
+  padding:0 48px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:60px;
+  align-items:center;
+}
+.caribbean-story-v23.reverse .caribbean-photo-v23{order:2}
+.caribbean-story-v23.reverse .caribbean-copy-v23{order:1}
+.caribbean-photo-v23{overflow:hidden;box-shadow:0 18px 44px rgba(23,64,82,.12);background:#fff}
+.caribbean-photo-v23 img{display:block;width:100%;height:420px;object-fit:cover}
+.caribbean-copy-v23{min-width:0}
+.caribbean-copy-v23 h2{font-family:Georgia,serif;font-size:40px;line-height:1.12;font-weight:400;margin:0 0 20px}
+.caribbean-copy-v23 p:not(.caribbean-number){font-family:Georgia,serif;font-size:19px;line-height:1.68;color:#385e70}
+
+.caribbean-immersive-v23{
+  max-width:1240px;
+  margin:88px auto 0;
+  padding:58px 48px 64px;
+  background:#e9f5f3;
+  box-sizing:border-box;
+}
+.caribbean-immersive-copy{max-width:900px;margin:0 auto 34px;text-align:center}
+.caribbean-immersive-copy h2{font-family:Georgia,serif;font-weight:400;font-size:44px;line-height:1.12;margin:12px 0 18px}
+.caribbean-immersive-copy p:last-child{font-family:Georgia,serif;font-size:20px;line-height:1.65;color:#385e70}
+.caribbean-immersive-photos{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  width:100%;
+}
+.caribbean-immersive-photos img{
+  display:block;
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  box-shadow:0 10px 26px rgba(23,64,82,.10);
+}
+
+@media(max-width:900px){
+  .caribbean-hero-v23,.caribbean-hero-v23>img{height:460px;min-height:460px}
+  .caribbean-hero-v23-copy{left:28px;right:28px}
+  .caribbean-hero-v23-copy h1{font-size:54px}
+  .caribbean-story-v23{
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:0 22px;
+    margin-bottom:58px;
+  }
+  .caribbean-story-v23.reverse .caribbean-photo-v23,
+  .caribbean-story-v23.reverse .caribbean-copy-v23{order:initial}
+  .caribbean-photo-v23 img{height:auto;aspect-ratio:1.45/1}
+  .caribbean-immersive-v23{margin:54px 18px 0;padding:42px 22px 46px}
+  .caribbean-immersive-copy h2{font-size:36px}
+  .caribbean-immersive-photos{grid-template-columns:1fr}
+  .caribbean-immersive-photos img{height:auto;aspect-ratio:1.5/1}
+}
+@media(max-width:560px){
+  .caribbean-hero-v23,.caribbean-hero-v23>img{height:410px;min-height:410px}
+  .caribbean-hero-v23-copy{left:20px;right:20px}
+  .caribbean-hero-v23-copy h1{font-size:42px}
+  .caribbean-hero-v23-copy>p:last-child{font-size:18px}
+  .caribbean-story-v23{padding:0 16px}
+  .caribbean-copy-v23 h2{font-size:31px}
+  .caribbean-immersive-v23{margin:42px 10px 0;padding:34px 16px 38px}
+}
+
+
+/* ===== v24 Caribbean finishing adjustments ===== */
+.caribbean-immersive-v23{
+  padding-bottom:32px;
+  margin-bottom:0;
+}
+.caribbean-immersive-photos{
+  margin-bottom:0;
+}
+.caribbean-imagine{
+  margin-top:0 !important;
+  padding-top:42px !important;
+}
+@media(max-width:900px){
+  .caribbean-immersive-v23{padding-bottom:24px}
+  .caribbean-imagine{padding-top:32px !important}
+}
+
+/* ===== Alaska cruise destination page ===== */
+.alaska-page{font-family:Georgia,'Times New Roman',serif;color:#073f5b;background:#fbf8f1}
+.alaska-hero{height:570px;position:relative;overflow:hidden}
+.alaska-hero>img{width:100%;height:100%;object-fit:cover;display:block}
+.alaska-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,241,.92) 0%,rgba(251,248,241,.66) 35%,rgba(251,248,241,.08) 68%)}
+.alaska-overlay{position:absolute;z-index:2;left:7%;top:50%;transform:translateY(-50%);max-width:650px}
+.alaska-overlay .eyebrow,.ak-final .eyebrow{font-family:Arial,sans-serif;font-weight:800;letter-spacing:.16em;color:#b9852b;font-size:19px}
+.alaska-overlay h1{font-size:68px;line-height:.98;margin:18px 0 24px;font-weight:500}
+.alaska-overlay p{font-size:24px;line-height:1.45;margin:0}
+.ak-story{max-width:1420px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding:72px 64px}
+.ak-story.blue{max-width:none;padding-left:max(64px,calc((100% - 1420px)/2 + 64px));padding-right:max(64px,calc((100% - 1420px)/2 + 64px));background:#eaf7f8}
+.ak-img img{width:100%;height:430px;object-fit:cover;display:block;border:9px solid #fff;box-shadow:0 8px 22px rgba(0,0,0,.08)}
+.ak-copy span{font-size:54px;color:#d2a447}.ak-copy h2{font-size:49px;line-height:1.03;font-weight:500;margin:15px 0 25px}
+.ak-copy p{font-size:23px;line-height:1.55;margin:0;max-width:620px}
+.ak-final{text-align:center;background:#eaf7f8;padding:62px 24px 70px}
+.ak-final h2{font-size:50px;font-weight:500;margin:14px 0 28px}
+.ak-final a{display:inline-block;background:#073f5b;color:#fff;border-radius:999px;padding:22px 38px;font-family:Arial,sans-serif;font-weight:800;letter-spacing:.04em}
+.ak-final p{font-size:20px;margin:22px 0 0}
+@media(max-width:800px){
+ .alaska-hero{height:auto;min-height:610px}.alaska-hero>img{position:absolute;inset:0}.alaska-hero:after{background:linear-gradient(0deg,rgba(251,248,241,.95),rgba(251,248,241,.25))}
+ .alaska-overlay{left:7%;right:7%;top:auto;bottom:45px;transform:none}.alaska-overlay h1{font-size:45px}.alaska-overlay p{font-size:19px}
+ .ak-story,.ak-story.blue{grid-template-columns:1fr;padding:42px 24px;gap:30px}.ak-story.reverse .ak-copy{order:2}.ak-story.reverse .ak-img{order:1}
+ .ak-img img{height:300px}.ak-copy h2{font-size:38px}.ak-copy p{font-size:19px}.ak-final h2{font-size:38px}
+}
+
+
+/* ===== v32 Europe corrections ===== */
+/* Clean, fully-contained hero: no baked-in text, no horizontal drift. */
+.europe-hero,
+.europe-page .destination-hero{
+  position:relative !important;
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  overflow:hidden !important;
+}
+.europe-hero > img,
+.europe-page .destination-hero > img{
+  display:block !important;
+  width:100% !important;
+  height:570px !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  margin:0 !important;
+  max-width:none !important;
+}
+.europe-hero::after,
+.europe-page .destination-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(251,248,241,.94) 0%,rgba(251,248,241,.78) 38%,rgba(251,248,241,.18) 68%,rgba(251,248,241,0) 100%);
+  pointer-events:none;
+}
+.europe-hero-copy,
+.europe-page .destination-hero-copy,
+.europe-page .hero-copy{
+  position:absolute !important;
+  z-index:2 !important;
+  left:max(7%,70px) !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  max-width:760px !important;
+}
+
+/* Tighten the ending so the CTA follows naturally after the final story section. */
+.europe-page .europe-final,
+.europe-page .destination-final,
+.europe-page .final-cta{
+  margin-top:0 !important;
+  padding-top:34px !important;
+}
+.europe-page .europe-story:last-of-type,
+.europe-page .destination-story:last-of-type,
+.europe-page .story:last-of-type{
+  margin-bottom:22px !important;
+  padding-bottom:30px !important;
+}
+
+@media(max-width:900px){
+  .europe-hero > img,
+  .europe-page .destination-hero > img{height:500px !important}
+  .europe-hero-copy,
+  .europe-page .destination-hero-copy,
+  .europe-page .hero-copy{
+    left:24px !important;
+    right:24px !important;
+    max-width:none !important;
+  }
+}
+
+
+/* ===== Hawaii cruise destination page ===== */
+.hawaii-page{background:#fbf8f1;color:#073f5b;overflow-x:hidden}
+.hawaii-hero{position:relative;height:570px;width:100%;overflow:hidden}
+.hawaii-hero>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+.hawaii-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,241,.95) 0%,rgba(251,248,241,.83) 37%,rgba(251,248,241,.20) 68%,rgba(251,248,241,0) 100%)}
+.hawaii-hero-copy{position:absolute;z-index:2;left:max(7%,70px);top:50%;transform:translateY(-50%);max-width:760px}
+.hawaii-eyebrow{font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:.18em;color:#b9852b;font-size:17px}
+.hawaii-hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(60px,6vw,88px);line-height:.98;margin:16px 0 24px}
+.hawaii-hero-copy>p:last-child{font-family:Georgia,serif;font-size:22px;line-height:1.5;max-width:700px;margin:0}
+
+.hawaii-intro{max-width:980px;margin:0 auto;text-align:center;padding:66px 32px 58px}
+.hawaii-intro h2,.hawaii-copy h2,.hawaii-moment h2,.hawaii-final h2{font-family:Georgia,serif;font-weight:400}
+.hawaii-intro h2{font-size:46px;margin:12px 0 20px}
+.hawaii-intro>p:last-child{font-family:Georgia,serif;font-size:21px;line-height:1.65;color:#385e70}
+
+.hawaii-story{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:68px;align-items:center;padding:58px 58px}
+.hawaii-story.hawaii-blue{max-width:none;background:#eaf7f8;padding-left:max(58px,calc((100% - 1360px)/2 + 58px));padding-right:max(58px,calc((100% - 1360px)/2 + 58px))}
+.hawaii-photo{min-width:0}
+.hawaii-photo img{display:block;width:100%;height:410px;object-fit:cover;border:9px solid #fff;box-shadow:0 10px 28px rgba(22,60,80,.10)}
+.hawaii-copy{min-width:0}
+.hawaii-copy span{font-family:Georgia,serif;font-size:54px;color:#d2a447}
+.hawaii-copy h2{font-size:46px;line-height:1.08;margin:12px 0 22px}
+.hawaii-copy p{font-family:Georgia,serif;font-size:20px;line-height:1.62;color:#385e70}
+.hawaii-story.reverse .hawaii-copy{order:1}
+.hawaii-story.reverse .hawaii-photo{order:2}
+
+.hawaii-moment{max-width:900px;margin:0 auto;text-align:center;padding:58px 30px 52px}
+.hawaii-moment h2{font-size:44px;line-height:1.14;margin:14px 0 20px}
+.hawaii-moment>p:last-child{font-family:Georgia,serif;font-size:20px;line-height:1.65;color:#385e70}
+
+.hawaii-final{text-align:center;background:#eaf7f8;padding:44px 24px 64px}
+.hawaii-final h2{font-size:48px;margin:12px 0 26px}
+.hawaii-final a{display:inline-flex;align-items:center;gap:10px;background:#073f5b;color:#fff;border-radius:999px;padding:20px 34px;font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:.05em}
+.hawaii-final a span{font-size:24px;line-height:0}
+.hawaii-final>p:last-child{font-family:Georgia,serif;font-size:19px;margin:20px 0 0}
+
+@media(max-width:900px){
+ .hawaii-hero{height:500px}
+ .hawaii-hero-copy{left:24px;right:24px;max-width:none}
+ .hawaii-hero h1{font-size:54px}
+ .hawaii-story,.hawaii-story.hawaii-blue{grid-template-columns:1fr;gap:28px;padding:42px 22px}
+ .hawaii-story.reverse .hawaii-copy,.hawaii-story.reverse .hawaii-photo{order:initial}
+ .hawaii-photo img{height:auto;aspect-ratio:1.45/1}
+ .hawaii-copy h2{font-size:38px}
+}
+@media(max-width:560px){
+ .hawaii-hero{height:440px}
+ .hawaii-hero h1{font-size:44px}
+ .hawaii-hero-copy>p:last-child{font-size:18px}
+ .hawaii-intro{padding:48px 20px 42px}
+ .hawaii-intro h2{font-size:36px}
+ .hawaii-story,.hawaii-story.hawaii-blue{padding:34px 16px}
+ .hawaii-copy h2{font-size:32px}
+ .hawaii-moment{padding:44px 20px 40px}
+ .hawaii-final{padding-top:38px}
+ .hawaii-final h2{font-size:36px}
+ .hawaii-final a{width:min(100%,370px);justify-content:center;padding:18px 20px;font-size:13px}
+}
+
+
+/* Hawaii v35: hero readability only */
+.hawaii-hero:after{
+  background:linear-gradient(90deg,
+    rgba(251,248,241,.99) 0%,
+    rgba(251,248,241,.95) 38%,
+    rgba(251,248,241,.52) 58%,
+    rgba(251,248,241,.10) 78%,
+    rgba(251,248,241,0) 100%);
+}
+.hawaii-hero-copy h1,
+.hawaii-hero-copy>p:last-child{
+  text-shadow:0 1px 0 rgba(255,255,255,.55);
+}
+
+
+/* ===== Exotic Destinations cruise page ===== */
+.exotic-page{background:#fbf8f1;color:#073f5b;overflow-x:hidden}
+.exotic-hero{position:relative;height:570px;width:100%;overflow:hidden}
+.exotic-hero>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+.exotic-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,241,.98) 0%,rgba(251,248,241,.90) 37%,rgba(251,248,241,.36) 61%,rgba(251,248,241,.05) 80%,rgba(251,248,241,0) 100%)}
+.exotic-hero-copy{position:absolute;z-index:2;left:max(7%,70px);top:50%;transform:translateY(-50%);max-width:780px}
+.exotic-eyebrow{font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:.18em;color:#b9852b;font-size:17px}
+.exotic-hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(58px,5.8vw,86px);line-height:.98;margin:16px 0 24px}
+.exotic-hero-copy>p:last-child{font-family:Georgia,serif;font-size:22px;line-height:1.5;max-width:710px;margin:0}
+
+.exotic-intro{max-width:1020px;margin:0 auto;text-align:center;padding:64px 32px 54px}
+.exotic-intro h2,.exotic-copy h2,.exotic-moment h2,.exotic-final h2{font-family:Georgia,serif;font-weight:400}
+.exotic-intro h2{font-size:44px;line-height:1.12;margin:12px 0 20px}
+.exotic-intro>p:last-child{font-family:Georgia,serif;font-size:21px;line-height:1.65;color:#385e70}
+
+.exotic-story{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:68px;align-items:center;padding:56px 58px}
+.exotic-story.exotic-blue{max-width:none;background:#eaf7f8;padding-left:max(58px,calc((100% - 1360px)/2 + 58px));padding-right:max(58px,calc((100% - 1360px)/2 + 58px))}
+.exotic-photo{min-width:0}
+.exotic-photo img{display:block;width:100%;height:410px;object-fit:cover;border:9px solid #fff;box-shadow:0 10px 28px rgba(22,60,80,.10)}
+.exotic-copy{min-width:0}
+.exotic-copy span{font-family:Georgia,serif;font-size:54px;color:#d2a447}
+.exotic-copy h2{font-size:45px;line-height:1.08;margin:12px 0 22px}
+.exotic-copy p{font-family:Georgia,serif;font-size:20px;line-height:1.62;color:#385e70}
+.exotic-story.reverse .exotic-copy{order:1}
+.exotic-story.reverse .exotic-photo{order:2}
+
+.exotic-moment{max-width:900px;margin:0 auto;text-align:center;padding:54px 30px 48px}
+.exotic-moment h2{font-size:43px;line-height:1.14;margin:14px 0 20px}
+.exotic-moment>p:last-child{font-family:Georgia,serif;font-size:20px;line-height:1.65;color:#385e70}
+
+.exotic-final{text-align:center;background:#eaf7f8;padding:42px 24px 62px}
+.exotic-final h2{font-size:48px;margin:12px 0 26px}
+.exotic-final a{display:inline-flex;align-items:center;gap:10px;background:#073f5b;color:#fff;border-radius:999px;padding:20px 34px;font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:.05em}
+.exotic-final a span{font-size:24px;line-height:0}
+.exotic-final>p:last-child{font-family:Georgia,serif;font-size:19px;line-height:1.5;margin:20px auto 0;max-width:720px}
+
+@media(max-width:900px){
+ .exotic-hero{height:500px}
+ .exotic-hero-copy{left:24px;right:24px;max-width:none}
+ .exotic-hero h1{font-size:52px}
+ .exotic-story,.exotic-story.exotic-blue{grid-template-columns:1fr;gap:28px;padding:42px 22px}
+ .exotic-story.reverse .exotic-copy,.exotic-story.reverse .exotic-photo{order:initial}
+ .exotic-photo img{height:auto;aspect-ratio:1.45/1}
+ .exotic-copy h2{font-size:38px}
+}
+@media(max-width:560px){
+ .exotic-hero{height:450px}
+ .exotic-hero h1{font-size:42px}
+ .exotic-hero-copy>p:last-child{font-size:18px}
+ .exotic-intro{padding:46px 20px 40px}
+ .exotic-intro h2{font-size:34px}
+ .exotic-story,.exotic-story.exotic-blue{padding:34px 16px}
+ .exotic-copy h2{font-size:31px}
+ .exotic-moment{padding:42px 20px 38px}
+ .exotic-final h2{font-size:36px}
+ .exotic-final a{width:min(100%,370px);justify-content:center;padding:18px 20px;font-size:13px}
+}

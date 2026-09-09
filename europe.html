@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Europe Cruises | Cleverland Travel</title><link rel="stylesheet" href="styles.css">
+<style>
+/* Europe destination page: isolated styles so locked pages remain untouched. */
+.europe-page{background:#fbf8f1;color:#073f5b;font-family:Georgia,'Times New Roman',serif}
+.eu-hero{position:relative;height:650px;overflow:hidden;background:#fbf8f1}
+.eu-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.eu-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,241,1) 0%,rgba(251,248,241,.98) 32%,rgba(251,248,241,.88) 46%,rgba(251,248,241,.20) 68%,rgba(251,248,241,0) 100%)}
+.eu-overlay{position:relative;z-index:2;max-width:760px;padding:95px 0 0 7%;}
+.eu-eyebrow{font-family:Arial,Helvetica,sans-serif;color:#b9852b;font-weight:800;letter-spacing:.18em;font-size:25px;margin-bottom:25px}
+.eu-overlay h1{font-size:76px;line-height:.98;font-weight:500;margin:0 0 30px;letter-spacing:-.02em}
+.eu-overlay p{font-size:29px;line-height:1.42;margin:0;max-width:700px}
+.eu-story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1420px;margin:0 auto;padding:90px 60px}
+.eu-story:last-of-type{padding-bottom:38px}
+.eu-story.blue{max-width:none;background:#e9f7f7;padding-left:max(60px,calc((100% - 1420px)/2 + 60px));padding-right:max(60px,calc((100% - 1420px)/2 + 60px))}
+.eu-img img{display:block;width:100%;height:440px;object-fit:cover;box-shadow:0 8px 22px rgba(7,63,91,.08)}
+.eu-copy .num{display:block;color:#d5a54a;font-size:64px;line-height:1;margin-bottom:20px}
+.eu-copy h2{font-size:52px;line-height:1.05;font-weight:500;margin:0 0 28px}
+.eu-copy p{font-size:25px;line-height:1.58;margin:0;max-width:610px}
+.eu-final{text-align:center;padding:38px 30px 100px;background:linear-gradient(#fbf8f1,#eef8f7)}
+.eu-final .eu-eyebrow{font-size:20px;margin-bottom:18px}.eu-final h2{font-size:54px;font-weight:500;margin:0 0 34px}
+.eu-final a{display:inline-flex;align-items:center;justify-content:center;min-height:66px;padding:0 38px;border-radius:999px;background:#073f5b;color:#fff;font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:.035em;font-size:16px}
+.eu-final p{font-size:22px;margin:25px 0 0}
+@media(max-width:900px){.eu-hero{height:auto;min-height:650px}.eu-hero:after{background:rgba(251,248,241,.86)}.eu-overlay{padding:70px 28px}.eu-overlay h1{font-size:52px}.eu-overlay p{font-size:23px}.eu-story,.eu-story.blue{grid-template-columns:1fr;gap:35px;padding:55px 28px}.eu-story.blue .eu-copy{order:2}.eu-story.blue .eu-img{order:1}.eu-img img{height:330px}.eu-copy h2{font-size:42px}.eu-copy p{font-size:21px}.eu-final h2{font-size:42px}}
+</style></head>
+<body>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html"><img src="assets/cleverland-logo-approved.png" alt="Cleverland Travel"></a>
+<nav class="main-nav"><a href="index.html">Home</a><a class="active" href="cruises.html">Cruises</a><a href="destinations.html">Destinations</a><a href="disney.html">Disney</a><a href="about.html">About Ashley</a><a href="contact.html">Contact</a></nav>
+<a class="cta" href="contact.html">START DREAMING ›</a></div></header>
+<main class="europe-page europe-page">
+<section class="eu-hero europe-hero"><img src="assets/europe-hero-clean.jpg" alt="Santorini at sunset"><div class="eu-overlay"><div class="eu-eyebrow">EUROPE CRUISES</div><h1>Timeless Places.<br>Unforgettable Moments.</h1><p>Imagine waking to a new coastline, stepping into centuries of history, and ending the day with dinner overlooking the sea.</p></div></section>
+<section class="eu-story"><div class="eu-img"><img src="assets/europe-history.jpg" alt="Gondola on a Venetian canal"></div><div class="eu-copy"><span class="num">01</span><h2>Step Into a Rich<br>and Living History.</h2><p>Wander through cities where every street seems to tell a story. Glide along a Venetian canal, stand before ancient ruins, explore medieval squares, and see landmarks you have known from photographs suddenly become real. Europe has a way of making history feel wonderfully alive.</p></div></section>
+<section class="eu-story blue"><div class="eu-copy"><span class="num">02</span><h2>Discover Charming Towns<br>and Coastal Gems.</h2><p>Picture a morning along the Mediterranean, with colorful villages climbing the hills above brilliant blue water. Linger over lunch at a sidewalk café, stroll cobblestone streets, browse a local market, or simply find a beautiful overlook and stay awhile. Each port offers its own personality and pace.</p></div><div class="eu-img"><img src="assets/europe-coast.jpg" alt="Colorful Mediterranean coastal village"></div></section>
+<section class="eu-story"><div class="eu-img"><img src="assets/europe-culture.jpg" alt="Paris and the Eiffel Tower beside the Seine"></div><div class="eu-copy"><span class="num">03</span><h2>Experience a New<br>Culture Every Day.</h2><p>One day might bring art and architecture, another unforgettable food, music, gardens, or a quiet neighborhood you never expected to love. A European cruise lets you sample many different worlds in one journey while returning each evening to the comfort of your ship.</p></div></section>
+<section class="eu-final"><div class="eu-eyebrow">READY TO PLAN YOUR EUROPEAN ADVENTURE?</div><h2>Let’s Make This Dream Come True.</h2><a href="contact.html">I WANT TO MAKE THIS DREAM COME TRUE ›</a><p>Tell Ashley what you’re dreaming about, and she’ll help you begin.</p></section>
+</main></body></html>
