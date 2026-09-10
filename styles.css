@@ -1353,3 +1353,14 @@ a{text-decoration:none;color:inherit}
  .exotic-final h2{font-size:36px}
  .exotic-final a{width:min(100%,370px);justify-content:center;padding:18px 20px;font-size:13px}
 }
+/* Contact page intro */
+.contact-intro .dream-top-grid{
+grid-template-columns:1fr;
+}
+
+
+.contact-intro .dream-intro-inner{
+max-width:950px;
+margin:0 auto;
+text-align:center;
+}
